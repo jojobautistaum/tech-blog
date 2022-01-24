@@ -43,7 +43,7 @@ The Tech Blog app will allow you to view posts. It will also allow you to add, d
 
 ## Note Taker Link <a id="link"></a>
 
-https://safe-atoll-95629.herokuapp.com
+https://tranquil-ridge-17708.herokuapp.com
 
 ## Tech/Framework <a id="tech"></a>
 
