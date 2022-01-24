@@ -1,6 +1,10 @@
-{{!-- <article class="post">
+<article class="post">
   <div class="title">
-    <a href="{{post.post_text}}" target="_blank">{{post.title}}</a>
+    {{#if loggedIn}}
+      <a href="/dashboard">{{post.title}}</a>
+    {{else}}
+      <a href="/">{{post.title}}</a>
+    {{/if}}
     <span>({{post.post_text}})</span>
   </div>
   <div class="meta">
@@ -17,7 +21,7 @@
   </div>
 
   <div>
-    <button type="submit">add comment</button>
+    <button type="submit">Add Comment</button>
   </div>
 </form>
 {{/if}}
@@ -37,4 +41,4 @@
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
-{{/if}} --}}
+{{/if}}

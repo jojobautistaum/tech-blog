@@ -2,7 +2,7 @@
   {{#each this}}
   <section class="comment">
     <div class="meta">
-      <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+      <a href="/api/comments/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
     </div>
     <div class="text">
       {{comment_text}}

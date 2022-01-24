@@ -17,12 +17,7 @@ async function newFormHandler(event) {
     })
   });
 
-  // if (response.ok) {
-    document.location.replace('/dashboard');
-  // } else {
-  //   console.log(response);
-  //   alert(response.statusText);
-  // }
+  document.location.replace('/dashboard');
 }
 
 document.querySelector('.new-post-form').addEventListener('submit', newFormHandler);
