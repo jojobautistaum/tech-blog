@@ -9,7 +9,7 @@ const hbs = exphbs.create({ helpers });
 
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 4001;
 const HOST = process.env.HOST;
 
 const session = require('express-session');
