@@ -3,7 +3,7 @@ const sequelize = require('../../config/connection');
 const { Post, User, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// get all users
+// Get all posts
 router.get('/', (req, res) => {
   console.log('======================');
   Post.findAll({
@@ -34,6 +34,7 @@ router.get('/', (req, res) => {
     });
 });
 
+// Get a post by ID
 router.get('/:id', (req, res) => {
   Post.findOne({
     where: {
@@ -72,6 +73,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
+// Add a post
 router.post('/', withAuth, (req, res) => {
   Post.create({
     title: req.body.title,
@@ -97,6 +99,7 @@ router.post('/', withAuth, (req, res) => {
     });
 });
 
+// Update a post
 router.put('/:id', withAuth, (req, res) => {
   Post.update(
     {
@@ -129,6 +132,7 @@ router.put('/:id', withAuth, (req, res) => {
     });
 });
 
+// Remove a post by ID
 router.delete('/:id', withAuth, (req, res) => {
   console.log('id', req.params.id);
   Post.destroy({

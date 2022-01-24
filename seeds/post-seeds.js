@@ -1,5 +1,6 @@
 const { Post } = require('../models');
 
+// Adding rows for post table
 const postdata = [
   {
     title: 'Why MVC is so important',

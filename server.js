@@ -15,6 +15,7 @@ const session = require('express-session');
 
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
+// Session management
 const sess = {
   secret: 'Super secret secret',
   cookie: {},
@@ -39,11 +40,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
-// turn on routes
-// must be after other app.use app.set and app.engine
+// Turn on routes
+// Must be after other app.use app.set and app.engine
 app.use(routes);
 
-// turn on connection to db and server
+// Turn on connection to db and server
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`Now listening to http://${HOST}:${PORT}`));
 });

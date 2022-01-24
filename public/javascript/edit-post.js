@@ -1,3 +1,4 @@
+// Listener for editing post
 async function editFormHandler(event) {
   event.preventDefault();
 
@@ -22,6 +23,7 @@ async function editFormHandler(event) {
     
 }
 
+// Listener for deleting post
 async function deleteFormHandler(event) {
   event.preventDefault();
   const post_id = window.location.toString().split('/')[

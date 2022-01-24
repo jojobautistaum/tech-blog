@@ -1,3 +1,4 @@
+// Listener for signing up user
 async function signupFormHandler(event) {
   event.preventDefault();
 

@@ -10,7 +10,7 @@ class User extends Model {
   }
 }
 
-// create fields/columns for User model
+// Create fields/columns for User table
 User.init(
   {
     id: {

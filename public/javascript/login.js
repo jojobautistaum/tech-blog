@@ -1,3 +1,4 @@
+// Listener for logging in user
 async function loginFormHandler(event) {
   event.preventDefault();
 

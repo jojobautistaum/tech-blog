@@ -37,11 +37,29 @@ The Tech Blog app will allow you to view posts. It will also allow you to add, d
 ### Run the following in the command line
 
 - **npm start** <br/>
-  then open the link in the browser. ie. http://localhost:3001
+  then open the link in the browser. ie. http://localhost:4001
 
 ### Screenshots
 
-## Note Taker Link <a id="link"></a>
+- Home Page <br />
+  ![Homepage](https://user-images.githubusercontent.com/90885263/150869122-a40cb0f2-ebbe-4965-816c-8269c3445205.jpg)
+
+- Login Page <br />
+  ![login-page](https://user-images.githubusercontent.com/90885263/150869215-26559bf9-7f1c-413e-8daa-4eee10bb5bad.jpg)
+
+- Dashboard Page <br />
+  ![dashboard](https://user-images.githubusercontent.com/90885263/150869298-40dac5ff-a1fb-4f7f-a8b7-4c03644c5bbe.jpg)
+
+- Post with comment <br />
+  ![Post with comment](https://user-images.githubusercontent.com/90885263/150876304-a0f1308b-e02b-4d23-a833-ea82efa3cd1e.jpg)
+
+- Adding comment <br />
+  ![post-comment](https://user-images.githubusercontent.com/90885263/150875867-c5544190-a580-49a2-8b27-00e7b6af5f4f.jpg)
+
+- Updating or deleting a post <br />
+  ![edit-delete-post](https://user-images.githubusercontent.com/90885263/150876055-9b1a3404-6e97-430f-9213-31a2f136314c.jpg)
+
+## Note Taker Link in Heroku<a id="link"></a>
 
 https://tranquil-ridge-17708.herokuapp.com
 

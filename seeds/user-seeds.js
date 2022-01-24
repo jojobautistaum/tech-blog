@@ -1,6 +1,7 @@
 const sequelize = require('../config/connection');
 const { User, Post } = require('../models');
 
+// Adding rows for user table
 const userdata = [
   {
     username: 'jaime',

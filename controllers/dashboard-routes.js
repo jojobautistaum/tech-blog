@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
-// get all posts for dashboard
+// Get all posts of a logged in user for dashboard
 router.get('/', withAuth, (req, res) => {
   console.log(req.session);
   console.log('======================');
@@ -41,6 +41,7 @@ router.get('/', withAuth, (req, res) => {
     });
 });
 
+// Get a post for editing by ID
 router.get('/edit/:id', withAuth, (req, res) => {
   Post.findByPk(req.params.id, {
     attributes: [
@@ -80,6 +81,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
     });
 });
 
+// Add a post
 router.get('/add-post', withAuth, (req,res) => {
   res.render('add-post', {});
 });
