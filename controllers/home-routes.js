@@ -31,6 +31,7 @@ router.get('/', (req, res) => {
 
       res.render('homepage', {
         posts,
+        username: req.session.username,
         loggedIn: req.session.loggedIn
       });
     })
