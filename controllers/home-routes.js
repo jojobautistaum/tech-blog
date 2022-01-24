@@ -10,8 +10,7 @@ router.get('/', (req, res) => {
       'id',
       'post_text',
       'title',
-      'created_at'
-    ],
+      'created_at'],
     include: [
       {
         model: Comment,
@@ -51,8 +50,7 @@ router.get('/post/:id', (req, res) => {
       'id',
       'post_text',
       'title',
-      'created_at'
-    ],
+      'created_at'],
     include: [
       {
         model: Comment,
@@ -94,6 +92,12 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login');
+});
+
+router.get('/signup', (req, res) => {
+  
+
+  res.render('signup');
 });
 
 module.exports = router;

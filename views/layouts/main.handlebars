@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tech Blog</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
@@ -14,20 +15,26 @@
       <nav>
         <ul>
           <li>
-              <a href="/homepage">Home</a> 
+              <a href="/">Home</a> 
           </li>
           <li>
               <a href="/dashboard">Dashboard</a>
           </li>
-          <li>
-            {{#if loggedIn}}
-              <a href="/logout">Logout</a>
-            {{else}}
+          {{#if loggedIn}}
+            <li>
+              <a id="logout" href="#">Logout</a>
+            </li>
+          {{else}}
+            <li>
               <a href="/login">Login</a>
-            {{/if}}
-          </li>
+            </li>
+            <li>
+              <a href="/signup">Signup</a>
+            </li>
+          {{/if}}
         </ul>
       </nav>
+      <div class="break-column"> </div>
       <h1>
         <a href="/">The Tech Blog</a>
       </h1>
@@ -36,9 +43,9 @@
     <main>
       {{{ body }}}
     </main>
-    <footer>
+    {{!-- <footer>
       Thanks for visiting!
-    </footer>
+    </footer> --}}
   </div>
 
   {{#if loggedIn}}

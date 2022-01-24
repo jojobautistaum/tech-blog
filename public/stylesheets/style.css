@@ -36,11 +36,6 @@ button:hover {
   background-color: #3486eb;
 }
 
-.post-list {
-  margin: 0;
-  padding: 0;
-}
-
 textarea, input {
   padding: .5%;
   border-radius: 5px;
@@ -79,7 +74,7 @@ header {
   color: #91CBCD;
   background-color: black;
   background-position: center;
-  padding: 20px 0;
+  /* padding: 2px 0; */
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -91,10 +86,11 @@ header {
 
 header h1 {
   font-weight: bold;
-  margin-left: 1%;
+  margin-left: 3%;
+  margin-block-start: 5px;
   font-size: 3.5vw;
-  background-color: #91CBCD;
-  padding: 15px 50px;
+  background-color: #D9EAD3;
+  padding: 5px 10px;
   border-radius: 15px;
 }
 
@@ -105,7 +101,7 @@ header h1 a {
 }
 
 header nav {
-  margin: 15px 0;
+  margin: 2px 0;
 }
 
 header nav ul {
@@ -117,14 +113,24 @@ header nav ul {
 }
 
 header nav ul li a {
-  padding: 15px 15px;
+  padding: 5px 5px;
   font-size: 1.9vw;
-  color: #91CBCD;
+  color: #D9EAD3;
+}
+
+#dashboard-posts li {
+  list-style-type: none;
+}
+
+.break-column {
+  flex-basis: 100%;
+  width: 0;
 }
 
 main {
   flex: 1;
-  padding: 2% 4%;
+  padding: 2% 1%;
+  background-color: #D9EAD3;
 }
 
 .btn-no-style {
@@ -143,6 +149,15 @@ main {
 .btn-no-style:hover {
   background: none;
   color: #3486eb;
+  margin-left: 40%;
+  padding: 2px 5px;
+}
+
+.add-post-btn {
+  margin-left: 45%;
+  background-color: black;
+  color: #D9EAD3;
+  padding: 5px 10px;
 }
 
 .delete-post-btn {
@@ -153,20 +168,33 @@ main {
   background-color: #ff643d;
 }
 
-.post {
-  margin-bottom: 2%;
-  line-height: 150%;
+.post-list {
+  list-style: none;
 }
 
-.post .title span {
-  font-style: italic;
-  font-size: 90%;
-  color: #7d7d7d;
+.post, .new-post-form {
+  margin-bottom: 5px;
+  line-height: 150%;
+  padding: 0 5px;
+  border: 2px solid black;
+}
+
+.post .comment {
+  font-size: 80%;
+  padding: 0 5px 0 5px;
+  color: black;
+  background-color: #D9EAD3;
+}
+
+.post .title, .add-title {
+  padding: 0 5px 0 5px;
+  background-color: black;
+  color: #D9EAD3;
 }
 
 .edit-link {
   display: block;
-  margin: -1.5% 0 2% 0;
+  margin: 0.5% 0 1.5% 0;
 }
 
 .comment-form {
@@ -174,7 +202,7 @@ main {
 }
 
 .comment {
-  padding: 1%;
+  /* padding: 1%; */
   margin-bottom: 1%;
 }
 
@@ -196,10 +224,10 @@ main {
   margin-bottom: 5%;
 }
 
-footer {
+/* footer {
   border-top: 1px solid #ccc;
   display: flex;
   justify-content: center;
   padding: 1%;
   font-size: 110%;
-}
+} */

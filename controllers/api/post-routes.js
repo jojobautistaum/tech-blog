@@ -11,8 +11,7 @@ router.get('/', (req, res) => {
       'id',
       'post_text',
       'title',
-      'created_at'
-    ],
+      'created_at'],
     include: [
       {
         model: Comment,
@@ -44,8 +43,7 @@ router.get('/:id', (req, res) => {
       'id',
       'post_text',
       'title',
-      'created_at'
-    ],
+      'created_at'],
     include: [
       {
         model: Comment,
@@ -75,13 +73,24 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', withAuth, (req, res) => {
-  // expects {title: 'Taskmaster goes public!', post_text: 'https://taskmaster.com/press', user_id: 1}
   Post.create({
     title: req.body.title,
     post_text: req.body.post_text,
     user_id: req.session.user_id
   })
-    .then(dbPostData => res.json(dbPostData))
+    .then(dbPostData =>  {
+      if (dbPostData) {
+        const post = dbPostData.get({ plain: true });
+        
+        res.render('dashboard', {
+          title,
+          post_text,
+          loggedIn: true
+        });
+      } else {
+        res.status(404).end();
+      }
+    })
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
@@ -91,7 +100,8 @@ router.post('/', withAuth, (req, res) => {
 router.put('/:id', withAuth, (req, res) => {
   Post.update(
     {
-      title: req.body.title
+      title: req.body.title,
+      post_text: req.body.post_text
     },
     {
       where: {
@@ -104,7 +114,14 @@ router.put('/:id', withAuth, (req, res) => {
         res.status(404).json({ message: 'No post found with this id' });
         return;
       }
-      res.json(dbPostData);
+     
+      const post = dbPostData.get({ plain: true });
+      
+      res.render('dashboard', {
+          title,
+          post_text,
+          loggedIn: true
+      });
     })
     .catch(err => {
       console.log(err);
@@ -124,7 +141,12 @@ router.delete('/:id', withAuth, (req, res) => {
         res.status(404).json({ message: 'No post found with this id' });
         return;
       }
-      res.json(dbPostData);
+      const post = dbPostData.get({ plain: true });
+      res.render('dashboard', {
+          title,
+          post_text,
+          loggedIn: true
+      });
     })
     .catch(err => {
       console.log(err);

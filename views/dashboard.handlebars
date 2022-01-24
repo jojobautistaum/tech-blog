@@ -1,7 +1,7 @@
 {{#if posts.length}}
-<section>
+<section class="new-post-form">
   <h2>Your Posts</h2>
-  <ol>
+  <ol id="dashboard-posts">
     {{#each posts as |post|}}
     <li>
       {{> post-info post}}
@@ -9,6 +9,7 @@
     </li>
     {{/each}}
   </ol>
+  <a href="/dashboard/add-post" class="add-post-btn"><i class="fas fa-plus fa-xs"></i> New Post</a>
 </section>
 {{/if}}
 
