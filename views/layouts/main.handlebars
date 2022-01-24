@@ -44,7 +44,12 @@
       {{{ body }}}
     </main>
     <footer>
-      Thanks for visiting!
+      {{#if loggedIn}}
+        You are logged as {{user.username}}
+        {{user.id}}
+      {{else}}
+        ©️2022 Programmed by: Jojo Bautista
+      {{/if}}
     </footer>
   </div>
 
