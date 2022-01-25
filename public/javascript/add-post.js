@@ -24,6 +24,7 @@ async function newFormHandler(event) {
   }
   catch(err) {
     console.log(err);
+    alert(err);
   }
 }
 
