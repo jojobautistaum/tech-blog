@@ -59,7 +59,7 @@ The Tech Blog app will allow you to view posts. It will also allow you to add, d
 - Updating or deleting a post <br />
   ![edit-delete-post](https://user-images.githubusercontent.com/90885263/150876055-9b1a3404-6e97-430f-9213-31a2f136314c.jpg)
 
-## Note Taker Link in Heroku<a id="link"></a>
+## App Link in Heroku<a id="link"></a>
 
 https://tranquil-ridge-17708.herokuapp.com
 
