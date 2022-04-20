@@ -4,7 +4,7 @@
 
 ## Description
 
-The Tech Blog app will allow you to view posts. It will also allow you to add, delete and edit post when you are logged in. You are encouraged to created your credential in order to use all available functionality of the app.
+The Tech Blog app will allow you to view posts. It will also allow you to add, delete and edit post when you are logged in. You are encouraged to create your credential in order to use all available functionality of the app.
 
 ## Table of Contents
 
